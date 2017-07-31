@@ -18,9 +18,9 @@ class Register {
         this.email.clear().sendKeys(email);
         this.password.clear().sendKeys(password);
         this.registerButton.click();
-        browser.sleep(3000); 
-    }
+        browser.sleep(2000); 
+    };
 
-}
+};
 
 module.exports = Register;
