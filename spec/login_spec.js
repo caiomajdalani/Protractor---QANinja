@@ -1,8 +1,10 @@
 'use strict';
 
 const Login = require('../pages/login_po.js');
+const Dashboard = require('../pages/dashboard_po.js')
 
 const login = new Login();
+const dashboard = new Dashboard();
 
 describe('Login: ',()=>{
     it('with incorrect email.',()=>{
