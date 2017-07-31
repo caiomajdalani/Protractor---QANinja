@@ -1,0 +1,23 @@
+{
+  "name": "agosto-turma-sabado",
+  "version": "1.0.0",
+  "description": "Treinamento Protractor + Jasmine",
+  "main": "protractor.conf.js",
+  "scripts": {
+    "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "test": "protractor protractor.conf.js",
+    "report": "./node_modules/.bin/allure generate ./allure-results -o ./reports"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:qaninja/protractor/agosto-turma-sabado.git"
+  },
+  "devDependencies": {
+    "allure-commandline": "^1.5.0",
+    "faker": "^4.1.0",
+    "jasmine-allure-reporter": "^1.0.1",
+    "protractor": "^4.0.3"
+  },
+  "author": "Caio Majdalani",
+  "license": "ISC"
+}
