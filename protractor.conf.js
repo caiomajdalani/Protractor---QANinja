@@ -6,8 +6,7 @@ exports.config = {
   getPageTimeout: 60000,
   allScriptsTimeout: 500000,
   specs: [
-    'spec/taskStory_spec.js',
-    'spec/subtaskStory_spec.js'
+    'spec/*_spec.js'
   ],
 
   framework: 'jasmine2',
