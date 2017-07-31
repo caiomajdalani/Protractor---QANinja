@@ -7,8 +7,10 @@ const login = new Login();
 const dashboard = new Dashboard();
 
 describe('Login: ',()=>{
-    it('with incorrect email.',()=>{
+    beforeAll(()=>{
         login.go();
+    });
+    it('with incorrect email.',()=>{
         login.with('teste.com', '12345678');
         expect(login.warningMessage.getText())
             .toEqual('Informe um email válido.');
@@ -20,7 +22,9 @@ describe('Login: ',()=>{
     });
     it('with success.', ()=>{
         login.with('Caio QANinja','caio@qaninja.com.br','teste1234');
-        expect(dashboard.title.getText())
-            .toEqual('Olá, Caio QANinja, seja bem vindo ao Invoices...');
+        browser.wait(dashboard.title.isPresent()).then(()=>{
+            expect(dashboard.title.getText())
+                .toEqual('Olá, Caio QANinja, seja bem vindo ao Invoices...');
+        });
     });
 });

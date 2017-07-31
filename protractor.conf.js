@@ -16,10 +16,7 @@ exports.config = {
     jasmine.getEnv().addReporter(new AllureReporter({
       resultsDir: 'allure-results'
     }));
-
-    browser.ignoreSynchronization = true;
   },
-
 
   capabilities: {
     'browserName': 'chrome',
@@ -38,6 +35,7 @@ exports.config = {
     onComplete: null,
     isVerbose: false,
     showColors: true,
-    includeStackTrace: false
+    includeStackTrace: false,
+    defaultTimeoutInterval: 30000
   }
 };

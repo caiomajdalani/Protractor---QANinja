@@ -7,8 +7,10 @@ const register = new Register();
 const dashboard = new Dashboard();
 
 describe('Register:', ()=>{
-    it('with invalid email.', ()=>{
+    beforeAll(()=>{
         register.go();
+    });
+    it('with invalid email.', ()=>{
         register.with('Caio Teste','teste','teste1234');
         expect(register.warningMessage.getText())
             .toEqual('Please enter valid e-mail address.');
@@ -25,7 +27,9 @@ describe('Register:', ()=>{
     });
     it('with success', ()=>{
         register.with('Caio QANinja','caio@qaninja.com.br','teste1234');
-        expect(dashboard.title.getText())
-            .toEqual('Olá, Caio QANinja, seja bem vindo ao Invoices...');
+        browser.wait(dashboard.title.isPresent()).then(()=>{
+            expect(dashboard.title.getText())
+                .toEqual('Olá, Caio QANinja, seja bem vindo ao Invoices...');
+        });
     });
 });

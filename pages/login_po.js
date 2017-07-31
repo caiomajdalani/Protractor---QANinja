@@ -14,7 +14,6 @@ class Login {
         this.email.clear().sendKeys(email);
         this.email.clear().sendKeys(password);
         this.loginButton.click();
-        browser.sleep(2000);
     };
 };
 
