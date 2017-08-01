@@ -21,5 +21,11 @@ class Invoices {
         this.formCustomerSelect = $('.form-control option:nth-child(1)');
         this.formCancel = $('#form-cancel-button');
     }
+
+    go(){
+        browser.get('/invoices');
+    };
     
 }
+
+module.exports = Invoices;

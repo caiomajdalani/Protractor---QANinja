@@ -6,7 +6,7 @@ class Customer {
         this.alertInfo = $('#content div[class*=alert-info]');
         this.searchField = $('#dataview-search-input');
         this.searchButton = $('#dataview-search-button');
-        
+
         this.gridName = $('#dataview-table-items-row td:nth-child(1)');
         this.gridPhone = $('#dataview-table-items-row td:nth-child(2)');
         this.gridEmail= $('#dataview-table-items-row td:nth-child(3)');
@@ -28,4 +28,10 @@ class Customer {
         this.formSave = $('#form-submit-button');
         this.formCancel = $('#form-cancel-button');
     }
+
+    go(){
+        browser.get('/customers');
+    };
 }
+
+module.exports = Customer;
