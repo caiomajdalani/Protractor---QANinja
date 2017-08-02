@@ -32,7 +32,4 @@ class Invoices {
 module.exports = Invoices;
 
 
-// let result = view.first().getText();
-// expect(result).to include? @name
-// expect(result).to include? @email
-// expect(result).to include? @telefone
+

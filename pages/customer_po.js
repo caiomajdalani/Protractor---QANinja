@@ -35,3 +35,8 @@ class Customer {
 }
 
 module.exports = Customer;
+
+// let result = grid.first().getText();
+// expect(result).toContain(name)
+// expect(result).toContain(email)
+// expect(result).toContain(phone)
