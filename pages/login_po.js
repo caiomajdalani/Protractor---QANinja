@@ -12,8 +12,9 @@ class Login {
     };
     with(email,password){
         this.email.clear().sendKeys(email);
-        this.email.clear().sendKeys(password);
+        this.password.clear().sendKeys(password);
         this.loginButton.click();
+        browser.sleep(1000);
     };
 };
 

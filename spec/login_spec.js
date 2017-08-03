@@ -8,7 +8,13 @@ const dashboard = new Dashboard();
 
 describe('Login: ',()=>{
     beforeAll(()=>{
+        dashboard.userMenu.click();
+        dashboard.logout.click();
+        browser.sleep(1000);
         login.go();
+    });
+    afterEach(()=>{
+        browser.sleep(1000);
     });
     it('with incorrect email.',()=>{
         login.with('teste.com', '12345678');
@@ -21,10 +27,10 @@ describe('Login: ',()=>{
             .toEqual('Senha inválida.');
     });
     it('with success.', ()=>{
-        login.with('Caio QANinja','caio@qaninja.com.br','teste1234');
+        login.with('caio.majdalani@gmail.com', 'teste1234');
         browser.wait(dashboard.title.isPresent()).then(()=>{
             expect(dashboard.title.getText())
-                .toEqual('Olá, Caio QANinja, seja bem vindo ao Invoices...');
+                .toEqual('Olá, Caio Majdalani, seja bem vindo ao Invoices...');
         });
     });
 });
