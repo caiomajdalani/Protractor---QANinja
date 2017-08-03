@@ -6,7 +6,8 @@
   "scripts": {
     "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update",
     "test": "protractor protractor.conf.js",
-    "report": "./node_modules/.bin/allure generate ./allure-results -o ./reports"
+    "report": "./node_modules/.bin/allure generate ./allure-results -o ./reports",
+    "cleanreports": "rm -rf allure-results/"
   },
   "repository": {
     "type": "git",

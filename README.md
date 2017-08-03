@@ -33,20 +33,25 @@ Too run tests in terminal, type:
   npm test
   or
   protractor protractor.conf.js
+
 ```
 
 To gerenate reports:
 
 ```
-  npm report
+  npm run report
   or
   ./node_modules/.bin/allure generate ./allure-results -o ./reports
+
 ```
 
 To clean reports:
 
 ```
   rm -rf allure-results/
+  or 
+  npm run cleanreports
+
 ```
 
 ## Reports
