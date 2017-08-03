@@ -1,4 +1,4 @@
-# ToDo APP Automation
+# Protractor - End to End automation for AngularJS
 
 Funciontal tests for QA Ninja Invoices Application
 
