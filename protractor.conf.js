@@ -7,7 +7,8 @@ exports.config = {
   allScriptsTimeout: 500000,
   specs: [
     'spec/register_spec.js',
-    'spec/login_spec.js'
+    'spec/login_spec.js',
+    'spec/customer_spec.js'
   ],
 
   framework: 'jasmine2',

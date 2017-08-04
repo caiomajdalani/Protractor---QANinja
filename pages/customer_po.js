@@ -16,9 +16,11 @@ class Customer {
         this.formGenderF = element(by.name('radio-f'));
         this.formType = $('#type-customer');
         this.formNotes = element(by.name('note'));
-        this.formCheckbox = $('.checkbox');
+        this.formCheckbox = $('.checkbox input');
         this.formSave = $('#form-submit-button');
         this.formCancel = $('#form-cancel-button');
+
+        this.emailError = $('.field-email span[id=error-text]');
     }
 
     selectType(name){
@@ -31,6 +33,7 @@ class Customer {
 
     go(){
         browser.get('/customers');
+        browser.sleep(2000);
     };
 }
 
