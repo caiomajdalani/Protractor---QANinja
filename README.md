@@ -36,15 +36,15 @@ Too run tests in terminal, type:
 
 ```
 
-To gerenate reports:
+<!-- To gerenate reports:
 
 ```
   npm run report
   or
   ./node_modules/.bin/allure generate ./allure-results -o ./reports
 
-```
-
+``` -->
+<!-- 
 To clean reports:
 
 ```
@@ -52,8 +52,8 @@ To clean reports:
   or 
   npm run cleanreports
 
-```
+``` -->
 
 ## Reports
 
-1. To see reports, open reports/index.html on firefox
+1. To see reports, open reports/htmlReport.html
