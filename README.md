@@ -27,7 +27,7 @@ Install it as:
 
 ## Usage
 
-Too run tests in terminal, type:
+Too run tests in terminal (for chrome browser), type:
 
 ---
 
@@ -37,9 +37,9 @@ Too run tests in terminal, type:
   and 
 
   npm test
-  or
-  protractor protractor.conf.js
 
+
+  <!--to firefox browser: protractor --browserName firefox  -->
 ```
 
 <!-- To gerenate reports:
