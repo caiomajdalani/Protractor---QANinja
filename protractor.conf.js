@@ -63,32 +63,33 @@ exports.config = {
 	// 	}
 	// },
 
-	// capabilities: { //for chrome headless
-	// 	'browserName': 'chrome',
-	// 	'chromeOptions': {
-	// 		// 'mobileEmulation': {
-	// 		// 	'deviceName': 'Google Nexus 5'
-	// 		// },
-	// 		'args': [
-	// 			"--headless", 
-	// 			"--disable-gpu", 
-	// 			"--window-size=1440,900"
-	// 		]
-	// 	}
-	// },
-
-	multiCapabilities: [{ //for multiple browsers
-		'browserName': 'firefox',
-		'args': [
-			"window-size=1440,900"
-		]
-	}, 
-	{
+	capabilities: { //for chrome headless
 		'browserName': 'chrome',
-		'args': [
-			"window-size=1440,900"
-		]
-	}],
+		'chromeOptions': {
+			// 'mobileEmulation': {
+			// 	'deviceName': 'Google Nexus 5'
+			// },
+			'args': [
+				"--headless", 
+				"--remote-debugging-port=9222 https://chromium.org",
+				"--disable-gpu", 
+				"--window-size=1440,900"
+			]
+		}
+	},
+
+	// multiCapabilities: [{ //for multiple browsers
+	// 	'browserName': 'firefox',
+	// 	'args': [
+	// 		"window-size=1440,900"
+	// 	]
+	// }, 
+	// {
+	// 	'browserName': 'chrome',
+	// 	'args': [
+	// 		"window-size=1440,900"
+	// 	]
+	// }],
 
 	baseUrl: 'https://ninjainvoices.herokuapp.com/',
 
