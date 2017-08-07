@@ -29,7 +29,13 @@ Install it as:
 
 Too run tests in terminal, type:
 
-```
+---
+
+  npm updatewd
+  npm startwd
+
+  and 
+
   npm test
   or
   protractor protractor.conf.js

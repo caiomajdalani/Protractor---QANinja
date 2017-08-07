@@ -1,8 +1,8 @@
 'use strict';
 
 exports.config = {
-	//seleniumAddress: 'http://localhost:4444/wd/hub',
-	directConnect: true,
+	seleniumAddress: 'http://localhost:4444/wd/hub',
+	//directConnect: true,
 	getPageTimeout: 60000,
 	allScriptsTimeout: 500000,
 	specs: [
@@ -20,8 +20,8 @@ exports.config = {
 		// }));
 		let Jasmine2HtmlReporter = require ('protractor-jasmine2-html-reporter');
 		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-			takeScreenshots: false,
-			//fixedScreenshotName: true,
+			takeScreenshots: true,
+			fixedScreenshotName: true,
 			savePath: 'reports',
 			// takeScreenshotsOnlyOnFailures: true,
 			// cleanDestination: false,
@@ -31,20 +31,33 @@ exports.config = {
 		}));
 		let SpecReporter = require ('jasmine-spec-reporter').SpecReporter;
 		jasmine.getEnv().addReporter(new SpecReporter({
-			displayFailuresSumary: true, //all fails resume are displayed
-			displayFailedSpec: true, // each test fail is displayed
-			displaySuiteNumber: true, // the number of each suite is displayed 
-			displaySpecDuration: true // displays the duration of each file .spec
+			spec: {
+				displayStacktrace: true, //display stacktrace for each failed assertion
+				displayErrorMessages: true, //display error messages for each failed assertion
+				displayFailed: true, //display each failed spec
+				displayDuration: true //display each spec duration
+			  },
+			summary: {
+				displayErrorMessages: true, //display error messages for each failed assertion
+				displayStacktrace: true, //display stacktrace for each failed assertion
+				displaySuccessful: true, //display summary of all successes after execution
+				displayFailed: true, //display summary of all failures after execution
+				displayDuration: true //display execution duration
+			},
+			colors: {
+				enabled: true
+			}
 		}));
 	},
 
 	capabilities: {
 		'browserName': 'chrome',
 		'chromeOptions': {
+			// 'mobileEmulation': {
+			// 	'deviceName': 'Google Nexus 5'
+			// },
 			'args': [
 				'window-size=1440,900'
-				//'disable-extensions',
-				//'--start-maximized'
 			]
 		}
 	},
@@ -52,10 +65,11 @@ exports.config = {
 	baseUrl: 'https://ninjainvoices.herokuapp.com/',
 
 	jasmineNodeOpts: {
-		onComplete: null,
-		isVerbose: false,
-		showColors: true,
-		includeStackTrace: false,
-		defaultTimeoutInterval: 30000
+		//onComplete: null,
+		//isVerbose: false,
+		//showColors: true,
+		//includeStackTrace: false,
+		defaultTimeoutInterval: 30000,
+		print: function() {}
 	}
 };

@@ -4,7 +4,8 @@
   "description": "Treinamento Protractor + Jasmine",
   "main": "protractor.conf.js",
   "scripts": {
-    "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update --versions.chrome 2.28",
+    "startwd": "node ./node_modules/protractor/bin/webdriver-manager start --versions.chrome 2.28",
     "test": "protractor protractor.conf.js"
   },
   "repository": {
