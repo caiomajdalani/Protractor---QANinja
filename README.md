@@ -38,19 +38,19 @@ Too run tests in terminal (for chrome browser), type:
 
   npm test
 
+---
+<!-- 
+to firefox browser: protractor --browserName firefox 
 
-  <!--to firefox browser: protractor --browserName firefox  -->
-```
-
-<!-- To gerenate reports:
+To gerenate reports:
 
 ```
   npm run report
   or
   ./node_modules/.bin/allure generate ./allure-results -o ./reports
 
-``` -->
-<!-- 
+``` 
+
 To clean reports:
 
 ```
