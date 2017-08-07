@@ -1,7 +1,8 @@
 'use strict';
 
 exports.config = {
-	seleniumAddress: 'http://localhost:4444/wd/hub',
+	//seleniumAddress: 'http://localhost:4444/wd/hub',
+	seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
 	//directConnect: true,
 	getPageTimeout: 60000,
 	allScriptsTimeout: 500000,
@@ -50,17 +51,44 @@ exports.config = {
 		}));
 	},
 
-	capabilities: {
+	// capabilities: {
+	// 	'browserName': 'chrome',
+	// 	'chromeOptions': {
+	// 		// 'mobileEmulation': {
+	// 		// 	'deviceName': 'Google Nexus 5'
+	// 		// },
+	// 		'args': [
+	// 			'window-size=1440,900'
+	// 		]
+	// 	}
+	// },
+
+	// capabilities: { //for chrome headless
+	// 	'browserName': 'chrome',
+	// 	'chromeOptions': {
+	// 		// 'mobileEmulation': {
+	// 		// 	'deviceName': 'Google Nexus 5'
+	// 		// },
+	// 		'args': [
+	// 			"--headless", 
+	// 			"--disable-gpu", 
+	// 			"--window-size=1440,900"
+	// 		]
+	// 	}
+	// },
+
+	multiCapabilities: [{ //for multiple browsers
+		'browserName': 'firefox',
+		'args': [
+			"window-size=1440,900"
+		]
+	}, 
+	{
 		'browserName': 'chrome',
-		'chromeOptions': {
-			// 'mobileEmulation': {
-			// 	'deviceName': 'Google Nexus 5'
-			// },
-			'args': [
-				'window-size=1440,900'
-			]
-		}
-	},
+		'args': [
+			"window-size=1440,900"
+		]
+	}],
 
 	baseUrl: 'https://ninjainvoices.herokuapp.com/',
 
