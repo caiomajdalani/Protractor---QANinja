@@ -24,9 +24,9 @@ exports.config = {
 			fixedScreenshotName: true,
 			savePath: 'reports',
 			// takeScreenshotsOnlyOnFailures: true,
-			// cleanDestination: false,
+			cleanDestination: false,
 			// fileNameDateSuffix: true,
-			screenshotsFolder: 'reports/screenshots'
+			screenshotsFolder: './screenshots'
 	
 		}));
 		let SpecReporter = require ('jasmine-spec-reporter').SpecReporter;
