@@ -51,32 +51,32 @@ exports.config = {
 		}));
 	},
 
-	// capabilities: {
-	// 	'browserName': 'chrome',
-	// 	'chromeOptions': {
-	// 		// 'mobileEmulation': {
-	// 		// 	'deviceName': 'Google Nexus 5'
-	// 		// },
-	// 		'args': [
-	// 			'window-size=1440,900'
-	// 		]
-	// 	}
-	// },
-
-	capabilities: { //for chrome headless
+	capabilities: {
 		'browserName': 'chrome',
 		'chromeOptions': {
 			// 'mobileEmulation': {
 			// 	'deviceName': 'Google Nexus 5'
 			// },
 			'args': [
-				"--headless", 
-				"--remote-debugging-port=9222 https://chromium.org",
-				"--disable-gpu", 
-				"--window-size=1440,900"
+				'window-size=1440,900'
 			]
 		}
 	},
+
+	// capabilities: { //for chrome headless
+	// 	'browserName': 'chrome',
+	// 	'chromeOptions': {
+	// 		// 'mobileEmulation': {
+	// 		// 	'deviceName': 'Google Nexus 5'
+	// 		// },
+	// 		'args': [
+	// 			"--headless", 
+	// 			"--remote-debugging-port=9222 https://chromium.org",
+	// 			"--disable-gpu", 
+	// 			"--window-size=1440,900"
+	// 		]
+	// 	}
+	// },
 
 	// multiCapabilities: [{ //for multiple browsers
 	// 	'browserName': 'firefox',

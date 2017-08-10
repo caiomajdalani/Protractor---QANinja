@@ -8,6 +8,8 @@ class Customer {
         this.searchButton = $('#dataview-search-button');
 
         this.grid = $$('#dataview-table-items tr');
+        this.delete = $('#delete-button');
+        this.confirmDel = element(by.cssContainingText('.modal-footer button[class*=btn-danger]', 'Sim'));
 
         this.formName = element(by.name('name'));
         this.formPhone = element(by.name('phone'));
