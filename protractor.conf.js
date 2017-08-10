@@ -19,7 +19,7 @@ exports.config = {
 		// jasmine.getEnv().addReporter(new AllureReporter({
 		// 	resultsDir: 'allure-results'
 		// }));
-		let Jasmine2HtmlReporter = require ('protractor-jasmine2-html-reporter');
+		let Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
 			takeScreenshots: true,
 			fixedScreenshotName: true,
@@ -28,19 +28,19 @@ exports.config = {
 			cleanDestination: false,
 			// fileNameDateSuffix: true,
 			screenshotsFolder: './screenshots'
-	
+
 		}));
-		let SpecReporter = require ('jasmine-spec-reporter').SpecReporter;
+		let SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 		jasmine.getEnv().addReporter(new SpecReporter({
 			spec: {
 				displayStacktrace: true, //display stacktrace for each failed assertion
 				displayErrorMessages: true, //display error messages for each failed assertion
 				displayFailed: true, //display each failed spec
 				displayDuration: true //display each spec duration
-			  },
+			},
 			summary: {
 				displayErrorMessages: true, //display error messages for each failed assertion
-				displayStacktrace: true, //display stacktrace for each failed assertion
+				displayStacktrace: false, //display stacktrace for each failed assertion
 				displaySuccessful: true, //display summary of all successes after execution
 				displayFailed: true, //display summary of all failures after execution
 				displayDuration: true //display execution duration
@@ -51,45 +51,39 @@ exports.config = {
 		}));
 	},
 
-	capabilities: {
-		'browserName': 'chrome',
-		'chromeOptions': {
-			// 'mobileEmulation': {
-			// 	'deviceName': 'Google Nexus 5'
-			// },
-			'args': [
-				'window-size=1440,900'
-			]
-		}
-	},
-
-	// capabilities: { //for chrome headless
+	// capabilities: {
 	// 	'browserName': 'chrome',
 	// 	'chromeOptions': {
 	// 		// 'mobileEmulation': {
 	// 		// 	'deviceName': 'Google Nexus 5'
 	// 		// },
 	// 		'args': [
-	// 			"--headless", 
-	// 			//"--remote-debugging-port=9222 https://chromium.org",
-	// 			"--disable-gpu", 
-	// 			"--window-size=800x600"
+	// 			'window-size=1440,900'
 	// 		]
 	// 	}
 	// },
 
-	// multiCapabilities: [{ //for multiple browsers
-	// 	'browserName': 'firefox',
-	// 	'args': [
-	// 		"window-size=1440,900"
-	// 	]
-	// }, 
-	// {
+	// capabilities: { //for chrome headless
 	// 	'browserName': 'chrome',
-	// 	'args': [
-	// 		"window-size=1440,900"
-	// 	]
-	// }],
+	// 	'chromeOptions': {
+	// 		'args': [
+	// 			"--headless", 
+	// 			"--disable-gpu", 
+	// 			"--window-size=1440,900"
+	// 		]
+	// 	}
+	// },
+
+	multiCapabilities: [{ //for multiple browsers
+		'browserName': 'firefox',
+		'marionette': true
+	},
+	{
+		'browserName': 'chrome',
+		'args': [
+			"window-size=1440,900"
+		]
+	}],
 
 	baseUrl: 'https://ninjainvoices.herokuapp.com/',
 
@@ -99,6 +93,6 @@ exports.config = {
 		//showColors: true,
 		//includeStackTrace: false,
 		defaultTimeoutInterval: 30000,
-		print: function() {}
+		print: function () { }
 	}
 };

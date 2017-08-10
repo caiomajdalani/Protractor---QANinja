@@ -5,11 +5,13 @@ const Customer = require('../pages/customer_po.js')
 const customer = new Customer();
 
 describe('Customers:', ()=>{
-    beforeAll(()=>{
-        customer.go();
-    });
+    // beforeAll(()=>{
+    //     customer.go();
+    // });
     describe('Negative tests -', ()=>{
         beforeEach(()=>{
+            customer.go();
+            browser.sleep(1000);
             let grid = customer.grid
             while(grid.length > 0){
                 customer.delete.click();

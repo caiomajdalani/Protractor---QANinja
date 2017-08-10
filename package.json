@@ -4,8 +4,8 @@
   "description": "Treinamento Protractor + Jasmine",
   "main": "protractor.conf.js",
   "scripts": {
-    "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update --versions.chrome 2.28",
-    "startwd": "node ./node_modules/protractor/bin/webdriver-manager start --versions.chrome 2.28",
+    "updatewd": "node ./node_modules/protractor/bin/webdriver-manager update --versions.chrome 2.31",
+    "startwd": "node ./node_modules/protractor/bin/webdriver-manager start --versions.chrome 2.31",
     "test": "protractor protractor.conf.js"
   },
   "repository": {
@@ -16,7 +16,7 @@
     "faker": "^4.1.0",
     "jasmine-spec-reporter": "^4.1.1",
     "protractor": "^4.0.3",
-    "protractor-jasmine2-html-reporter": "0.0.7"
+    "protractor-jasmine2-html-reporter": "^0.0.7"
   },
   "author": "Caio Majdalani",
   "license": "ISC"
