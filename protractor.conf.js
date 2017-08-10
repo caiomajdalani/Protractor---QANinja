@@ -71,9 +71,9 @@ exports.config = {
 	// 		// },
 	// 		'args': [
 	// 			"--headless", 
-	// 			"--remote-debugging-port=9222 https://chromium.org",
+	// 			//"--remote-debugging-port=9222 https://chromium.org",
 	// 			"--disable-gpu", 
-	// 			"--window-size=1440,900"
+	// 			"--window-size=800x600"
 	// 		]
 	// 	}
 	// },
