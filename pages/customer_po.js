@@ -7,7 +7,7 @@ class Customer {
         this.searchField = $('#dataview-search-input');
         this.searchButton = $('#dataview-search-button');
 
-        this.grid = $$('#dataview-table-items tr');
+        this.grid = $$('#dataview-table-items-row');
         this.delete = $('#delete-button');
         this.confirmDel = element(by.cssContainingText('.modal-footer button[class*=btn-danger]', 'Sim'));
 
