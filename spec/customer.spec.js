@@ -17,12 +17,6 @@ describe('Customers:', ()=>{
                     customer.confirmDel.click();
                 };
             });
-            // while(grid.length > 0){
-            //     customer.delete.click();
-            //     browser.sleep(1000);
-            //     customer.confirmDel.click();
-            //     grid = customer.grid;
-            // }
         });
         it('try to create new customer with invalid tel', ()=>{
             customer.newCustomer.click();

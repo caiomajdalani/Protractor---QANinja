@@ -14,7 +14,7 @@ describe('Login: ',()=>{
         login.go();
     });
     afterEach(()=>{
-        browser.sleep(1000);
+        browser.sleep(2000);
     });
     it('with incorrect email.',()=>{
         login.with('teste.com', '12345678');
