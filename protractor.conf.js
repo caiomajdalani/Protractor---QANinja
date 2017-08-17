@@ -51,17 +51,17 @@ exports.config = {
 		}));
 	},
 
-	// capabilities: {
-	// 	'browserName': 'chrome',
-	// 	'chromeOptions': {
-	// 		// 'mobileEmulation': {
-	// 		// 	'deviceName': 'Google Nexus 5'
-	// 		// },
-	// 		'args': [
-	// 			'window-size=1440,900'
-	// 		]
-	// 	}
-	// },
+	capabilities: {
+		'browserName': 'chrome',
+		'chromeOptions': {
+			// 'mobileEmulation': {
+			// 	'deviceName': 'Google Nexus 5'
+			// },
+			'args': [
+				'window-size=1440,900'
+			]
+		}
+	},
 
 	// capabilities: { //for chrome headless
 	// 	'browserName': 'chrome',
@@ -74,16 +74,16 @@ exports.config = {
 	// 	}
 	// },
 
-	multiCapabilities: [{ //for multiple browsers
-		'browserName': 'firefox',
-		'marionette': true
-	},
-	{
-		'browserName': 'chrome',
-		'args': [
-			"window-size=1440,900"
-		]
-	}],
+	// multiCapabilities: [{ //for multiple browsers
+	// 	'browserName': 'firefox',
+	// 	'marionette': true
+	// },
+	// {
+	// 	'browserName': 'chrome',
+	// 	'args': [
+	// 		"window-size=1440,900"
+	// 	]
+	// }],
 
 	baseUrl: 'https://ninjainvoices.herokuapp.com/',
 
